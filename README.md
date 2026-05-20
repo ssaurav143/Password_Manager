@@ -79,6 +79,3 @@ The generated password contains:
 - Random symbols  
 
 The password is shuffled for better security.
-## 📌 Author
-
-Made by Satya 😄
