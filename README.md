@@ -1,52 +1,80 @@
 # 🔐 Password Manager
 
-A simple and secure Password Manager application built using Python Tkinter.
+A Password Manager application built using Python and Tkinter that helps users generate secure passwords, store credentials in a JSON database, and quickly retrieve saved login information.
 
-The application allows users to generate strong random passwords, copy them automatically to the clipboard, and save website login credentials locally using a clean graphical interface.
+## ✨ Features
 
----
-
-## 🎮 Features
-
-- Random strong password generation  
-- Automatic clipboard copy using Pyperclip  
-- Save website credentials locally  
-- User confirmation popup before saving  
-- Input validation for empty fields  
-- Clean and beginner friendly GUI  
-- Default email autofill support  
+* Generate strong random passwords
+* Automatic password copy to clipboard using Pyperclip
+* Store credentials in a structured JSON database
+* Search saved credentials by website name
+* Input validation for empty fields
+* Exception handling for missing data files
+* Clean and user friendly graphical interface
+* Default email autofill support
 
 ---
 
-## 🧠 How It Works
+## 🖥️ Application Preview
 
-- Enter website name  
-- Enter email or username  
-- Generate a secure password  
-- Click the Add button to save credentials  
+The application allows users to:
 
-Saved credentials are stored inside:
-
-```text
-data.txt
-```
+1. Enter a website name
+2. Enter an email or username
+3. Generate a secure password
+4. Save credentials to a local JSON database
+5. Search previously saved credentials instantly
 
 ---
 
-## ▶️ How to Run
+## 🔑 Password Generation
 
-1. Install Python  
-2. Install Pyperclip  
+Generated passwords include a random combination of:
 
-```bash
-pip install pyperclip
+* Uppercase letters
+* Lowercase letters
+* Numbers
+* Special symbols
+
+Each password is shuffled to improve randomness and is automatically copied to the clipboard.
+
+---
+
+## 💾 JSON Storage
+
+Credentials are stored in a structured JSON format:
+
+```json
+{
+    "Google": {
+        "email": "example@gmail.com",
+        "password": "A8#xP9!kL"
+    }
+}
 ```
 
-3. Run the application  
+This makes data easier to manage and retrieve compared to plain text files.
 
-```bash
-python main.py
-```
+---
+
+## 🔍 Search Functionality
+
+Users can search for a website and instantly retrieve:
+
+* Website name
+* Email or username
+* Password
+
+If no record exists, the application displays an appropriate message.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Tkinter
+* JSON
+* Pyperclip
 
 ---
 
@@ -57,25 +85,30 @@ Password_Manager/
 │
 ├── main.py
 ├── logo.png
-├── data.txt
+├── data.json
+├── README.md
 ```
 
 ---
 
-## 🛠️ Tech Used
+## 🚀 Installation
 
-- Python  
-- Tkinter  
-- Pyperclip  
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/Password_Manager.git
+```
+
+Install the required dependency:
+
+```bash
+pip install pyperclip
+```
+
+Run the application:
+
+```bash
+python main.py
+```
 
 ---
-
-## 🔐 Password Generation Logic
-
-The generated password contains:
-
-- Random uppercase and lowercase letters  
-- Random numbers  
-- Random symbols  
-
-The password is shuffled for better security.
